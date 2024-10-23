@@ -1,0 +1,92 @@
+.booking-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .form-container {
+    width: 50%;
+  }
+  
+  .form-container h2, .form-container h3, .form-container h4 {
+    margin-bottom: 10px;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .payment-summary {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-summary p {
+    margin: 5px 0;
+  }
+  
+  /* Payment Options Layout */
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .payment-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .payment-options input {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  /* Payment Logos Styling */
+  .payment-logo {
+    width: 60px;
+    height: auto;
+    filter: grayscale(100%); /* Initially in grayscale */
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Change logo color and size when selected */
+  .payment-options input:checked + .payment-logo {
+    filter: none; /* Remove grayscale when selected */
+    transform: scale(1.1); /* Slightly enlarge when selected */
+  }
+  
+  /* Pay Now Button */
+  .pay-now-button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .pay-now-button:hover {
+    background-color: #218838;
+  }
+  
+  .image-container {
+    width: 45%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking GGR Parking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <p>FH4C+558, Garowe, Somalia | Saturday - Thursday: 6:00 AM - 6:30 PM | <span>Call: 5000</span></p>
+    </div>
+    <nav class="navbar">
+      <div class="logo">GGR Parking</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Booking </a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="btn get-started">Pay Parking</button>
+    </nav>
+  </header>
+
+  <div class="booking-container">
+    <div class="form-container">
+      <h2>Booking Form</h2>
+      <form id="bookingForm" action="" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+  
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+  
+        <label for="carPlate">Car Plate</label>
+        <input type="text" id="carPlate" name="carPlate" required>
+  
+        <div class="payment-summary">
+          <h3>Payment Summary</h3>
+          <p>Parking Fee: $12</p>
+          <p><strong>Total: $14</strong></p>
+        </div>
+  
+        <h4>Choose Your Payment Option</h4>
+  
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="paymentMethod" value="visa" required>
+            <img src="images/visa logo.png" alt="Visa" class="payment-logo">
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="mastercard">
+            <img src="images/Mastercard-logo.png" alt="MasterCard" class="payment-logo">
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="paypal">
+            <img src="images/primier wallet logo.png" alt="PayPal" class="payment-logo">
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="applePay">
+            <img src="images/IBS log.png" alt="Apple Pay" class="payment-logo">
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="bank1">
+            <img src="images/dahab plus logo.png" alt="Bank 1" class="payment-logo">
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="bank2">
+            <img src="bank2-logo.png" alt="Bank 2" class="payment-logo">
+          </label>
+        </div>
+  
+        <!-- Pay Now Button -->
+        <button type="button" class="pay-now-button" id="payNowBtn">Pay Now</button>
+      </form>
+    </div>
+  
+    <div class="image-container">
+      <img src="images/Phone notification.png" alt="Booking Image">
+    </div>
+  </div>
+  
+  
+  
+      
+  </main>
+</body>
+</html>

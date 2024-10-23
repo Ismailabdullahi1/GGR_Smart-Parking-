@@ -22,7 +22,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('images/Digital-systems-assurance-1920x1008.jpg') center/cover no-repeat;
+                url('images/Digital-systems-assurance-1920x1008.png') center/cover no-repeat;
     z-index: -1; /* Ensures the background stays behind other content */
 }
 
@@ -135,7 +135,7 @@ footer {
 
 /* Container adjustments */
 #services {
-    margin-top: 200px; /* Adds space above the services section */
+    margin-top: 110px; /* Adds space above the services section */
     padding: 10px 0;  /* Optional padding for aesthetics */
 }
 
@@ -201,4 +201,38 @@ footer {
         max-width: 100%; /* For smaller screens */
         width: 100%;
     }
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* General button styling */
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Book Parking Button */
+.btn-book {
+    background-color: #28a745; /* Green */
+}
+
+.btn-book:hover {
+    background-color: #218838;
+}
+
+/* Pay Parking Button */
+.btn-pay {
+    background-color: #007bff; /* Blue */
+}
+
+.btn-pay:hover {
+    background-color: #0069d9;
 }
