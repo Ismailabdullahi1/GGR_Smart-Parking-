@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Parking GGR </title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="Pay.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <p>FH4C+558, Garowe, Somalia | Saturday - Thursday: 6:00 AM - 6:30 PM | <span>Call: 5000</span></p>
+    </div>
+    <nav class="navbar">
+      <div class="logo">GGR Parking</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="pay.html" class="btn btn-pay">Pay Parking</a>
+    </nav>
+  </header>
+<!------>
+<main>
+    <h1>Pay Parking</h1>
+    <div class="payment-container">
+      <div class="payment-form">
+        <form id="pay-parking-form" action="process payment.php" method="POST">
+          <label for="car-plate">Enter Car Plate Number:</label>
+          <input type="text" id="car-plate" name="car_plate" required>
+          <button type="submit">Search</button>
+        </form>
+        
+        <div class="summary-box" id="summary-box" style="display: none;">
+          <h2>Parking Summary</h2>
+          <p><strong>Car Plate:</strong> <span id="plate-number"></span></p>
+          <p><strong>Hours in Parking:</strong> <span id="parking-hours"></span></p>
+          <p><strong>Parking Fee:</strong> <span id="parking-fee"></span></p>
+          <p><strong>Total Payment:</strong> <span id="total-payment"></span></p>
+
+          <label for="payment-option">Choose Payment Option:</label>
+          <select id="payment-option" name="payment_option">
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+          </select>
+
+          <button id="pay-now" class="btn btn-pay">Pay Now</button>
+        </div>
+      </div>
+
+      <div class="car-image">
+        <p>Pay with multiple Options </p>
+        <img id="car-img" src="images/payments options.jpg" alt="Car Image">
+      </div>
+</main>
+
+  <footer>
+    <p>&copy; 2024 GGR Parking. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>

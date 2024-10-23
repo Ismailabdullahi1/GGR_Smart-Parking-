@@ -54,3 +54,40 @@ window.onload = function() {
     }
   });
 
+
+  document.getElementById('pay-parking-form').onsubmit = function(event) {
+    event.preventDefault();
+    const plateNumber = document.getElementById('car-plate').value;
+  
+    // Send the car plate to the PHP script
+    fetch('process_payment.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: 'car_plate=' + encodeURIComponent(plateNumber)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Populate the summary box with the data
+        document.getElementById('plate-number').innerText = data.plate;
+        document.getElementById('parking-hours').innerText = data.hours;
+        document.getElementById('parking-fee').innerText = `$${data.fee}`;
+        document.getElementById('total-payment').innerText = `$${data.total}`;
+        document.getElementById('summary-box').style.display = 'block';
+        
+        // Show the car image
+        const carImg = document.getElementById('car-img');
+        carImg.src = data.image; // Path to the car image
+        carImg.style.display = 'block';
+      } else {
+        alert(data.error);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  };
+  
