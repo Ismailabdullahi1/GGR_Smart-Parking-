@@ -1,6 +1,6 @@
 // Function to dynamically change the service type
 // List of services
-const services = ["Fast", "MuMultiple Payment Options", "Scured"];
+const services = ["Fast", "Multiple Payment Options", "Scured"];
 let currentServiceIndex = 0;
 
 // Function to dynamically change the service type
@@ -90,4 +90,11 @@ window.onload = function() {
       alert('An error occurred. Please try again.');
     });
   };
-  
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
