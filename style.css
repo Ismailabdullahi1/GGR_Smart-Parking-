@@ -230,19 +230,9 @@ footer {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-    .serviceBox {
-        max-width: 100%; /* Make boxes take up full width on smaller screens */
-        width: 100%;
-    }
-}
 
-@media (max-width: 480px) {
-    .serviceBox {
-        max-width: 100%; /* For smaller screens */
-        width: 100%;
-    }
-}
+
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -380,11 +370,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .steps-container, .solutions-container {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .step-box, .solution-box {
     width: 80%;
