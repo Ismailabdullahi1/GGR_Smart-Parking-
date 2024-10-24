@@ -1,3 +1,32 @@
+/* General button styling */
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Book Parking Button */
+.btn-book {
+    background-color: #28a745; /* Green */
+}
+
+.btn-book:hover {
+    background-color: #218838;
+}
+
+/* Pay Parking Button */
+.btn-pay {
+    background-color: #007bff; /* Blue */
+}
+
+.btn-pay:hover {
+    background-color: #0069d9;
+}
+
 /* Reset some basic styling */
 * {
     margin: 0;
@@ -32,7 +61,6 @@ body {
     padding: 20px;
 }
 
-
 /* Header styling */
 .header-top {
     background-color: #4a90e2;
@@ -50,12 +78,26 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #fff;
+    position: relative;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #4a90e2;
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
 }
 
 .nav-menu {
@@ -70,28 +112,6 @@ body {
 .nav-menu a {
     text-decoration: none;
     color: #333;
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.get-started {
-    background-color: #4a90e2;
-    padding: 10px 25px;
-    border-radius: 5px;
-}
-
-
-
-.car-slot-info i {
-    margin-right: 10px;
-    font-size: 20px;
 }
 
 /* Main Section */
@@ -116,27 +136,18 @@ body {
     margin: 20px;
 }
 
-.buttons .btn {
-    flex: 1 1 100px;
-    min-width: 120px;
-    margin: 10px;
-    padding: 10px;
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-
-
 
 footer {
     background-color: #f5f5f5;
     padding: 10px;
     font-size: 14px;
     margin-top: 30px;
-}
-
-
-/* Container adjustments */
-#services {
-    margin-top: 110px; /* Adds space above the services section */
-    padding: 10px 0;  /* Optional padding for aesthetics */
 }
 
 /* Service Box Styling */
@@ -159,17 +170,47 @@ footer {
     flex-wrap: wrap; /* Allow the boxes to wrap on smaller screens */
 }
 
-/* Service Icon Styling */
-.serviceBox .service-icon {
-    font-size: 50px;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    margin: 0 auto 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+/* Responsive adjustments for Main Section */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks logo and nav on smaller screens */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu on mobile by default */
+        flex-direction: column; /* Stack menu items */
+        width: 100%; /* Full width */
+        background-color: white; /* Background color for mobile menu */
+        position: absolute; /* Positioning */
+        top: 70px; /* Below the navbar */
+        left: 0; /* Align left */
+        z-index: 10; /* On top of other content */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-menu li {
+        margin: 10px 0; /* Space between nav items */
+        padding: 10px; /* Touch-friendly */
+    }
+
+    .btn {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .main-content h1 {
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+
+    .btn-pay, .btn-book {
+        width: 90%; /* Full width for buttons */
+    }
 }
+
+
 
 /* Specific Box Backgrounds */
 .serviceBox.yellow {
@@ -235,4 +276,118 @@ footer {
 
 .btn-pay:hover {
     background-color: #0069d9;
+}
+/* How to Use Smart Parking Section */
+.how-to-use-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.how-to-use-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-box {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  font-size: 50px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.step-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Smart Parking Solutions Section */
+.smart-parking-solutions {
+  background-color: #e9f5fe;
+  padding: 50px 0;
+}
+
+.solutions-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.solutions-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.solution-box {
+  background: linear-gradient(145deg, #f0f8ff, #d1e8f2);
+  box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.solution-box:hover {
+  transform: translateY(-10px);
+}
+
+.solution-icon {
+  font-size: 50px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.solution-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.solution-description {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .steps-container, .solutions-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-box, .solution-box {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }
