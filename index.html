@@ -4,47 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
   <title>GGR Parking</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/GGR LOGO.png" type="image/x-icon">
+
   
-  <script src="script.js" defer></script>
+  
 </head>
 <body>
+  
   <!-- Header Section -->
   <header class="header">
-    <div class="header-top">
-        <p>FH4C+558, Garowe, Somalia | Saturday - Thursday: 6:00 AM - 6:30 PM | <span>Call: 5000</span></p>
-    </div>
+    
     <nav class="navbar">
-        <div class="logo">GGR Parking <a href="index.html"></a></div>
-        <div class="menu-toggle" id="mobile-menu">
+      <div class="logo">
+        <a href="index.html">
+            <img src="images/GGR LOGO.png" alt="GGR Parking Logo" class="logo-image">
+            <span>GGR Parking</span>
+        </a>
+    </div>
+    
+        <div class="menuToggle" id="mobileMenu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul class="nav-menu">
+        
+        <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="booking.html">Booking</a></li>
             <li><a href="Test.html">About Us</a></li>
             <li><a href="#">Contact</a></li>
             
         </ul>
-        <a href="Pay.html" class="btn btn-pay">Pay Parking</a>
+        <a href="Pay.html" class="nav-button">Pay Parking</a>
+
     </nav>
+    
 </header>
 
 <section> 
     <div class="background-image"></div>
     <div class="content">
         <main class="main-content">
-            <h1>Pay with <span id="service-type">H</span></h1>
+            <h1>Pay with <span id="service-type">Fast</span></h1>
             <div class="buttons">
-                <div class="button-container">
+                <!--<div class="button-container">
                     <a href="booking.html" class="btn btn-book">Book Parking</a>
                     <a href="Pay.html" class="btn btn-pay">Pay Parking</a>
-                </div>
+                </div>-->
             </div>
         </main>
+    </div>
+    <div class="parking-box">
+      <h2>Parking Availability</h2>
+      <div class="total-spots">
+          Total Spots: <span id="totalSpots">0</span>
+      </div>
+      <div class="available-spots">
+          Available Spots: <span id="availableSpots">0</span>
+      </div>
     </div>
 </section>
 
@@ -59,7 +79,7 @@
       </div>
   
       <div class="solution-box">
-        <div class="solution-icon"><i class="fas fa-gate"></i></div>
+        <div class="solution-icon"><i class="fas fa-user-shield"></i></div>
         <h3 class="solution-title">Automatic Gate Access</h3>
         <p class="solution-description">Your vehicle’s license plate is recognized instantly, granting automatic gate access without tickets.</p>
       </div>
@@ -108,14 +128,185 @@
   </div>
 </section>
 
-<!-- Smart Parking Solutions Section -->
+<!-- Smart Parking and Garaowe Digital  -->
 
-   
+<section class="smart-parking-info">
+  <h2>Our Part of Garowe's Digital Transformation</h2>
+  <div class="info-box-container">
+      <div class="info-box">
+          <div class="box-content">
+              <img src="images/garowe Digital.png" alt="Efficient Parking" class="box-image">
+              <h3>Efficient Parking Management</h3>
+              <p>Streamlines parking operations, reducing congestion and optimizing space usage across the city.</p>
+          </div>
+      </div>
+      <div class="info-box">
+          <div class="box-content">
+              <img src="images/garowe digital 2.jpg" alt="Eco-Friendly Solutions" class="box-image">
+              <h3>Eco-Friendly Solutions</h3>
+              <p>Minimizes vehicle emissions by decreasing idle times, contributing to a greener city environment.</p>
+          </div>
+      </div>
+      <div class="info-box">
+          <div class="box-content">
+              <img src="images/garowe security.jpg" alt="Enhanced Security" class="box-image">
+              <h3>Enhanced Security</h3>
+              <p>Utilizes advanced technology to ensure safe and secure parking for all citizens and visitors.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-----toturial -->
+
+<section class="tutorial-section">
+  <h2>Learn How to Use GGR Smart Parking System</h2>
+
+  <!-- Tutorial Video 1 -->
+  <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/videoID1" title="Video Tutorial 1"></iframe>
+      <div class="video-description">
+          <h3>Tutorial 1: Getting Started</h3>
+          <p>Learn the basics of the GGR Smart Parking System, including how to find parking spots, book spaces, and navigate the user-friendly interface. This video will guide you through the initial steps to get you up and running.</p>
+      </div>
+  </div>
+
+  <!-- Tutorial Video 2 -->
+  <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/videoID2" title="Video Tutorial 2"></iframe>
+      <div class="video-description">
+          <h3>Tutorial 2: Advanced Features</h3>
+          <p>Discover the advanced features of GGR Smart Parking, such as making payments, managing bookings, and using digital navigation to easily locate available parking spaces.</p>
+      </div>
+  </div>
+</section>
 
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 . GGR Parking All Rights Reserved.</p>
-  </footer>
+
+<!-----what people said -->
+<section class="testimonials-section">
+  <h2>What People Say About GGR Smart Parking</h2>
+  <div class="testimonial-container">
+      <div class="testimonial-box">
+          <div class="testimonial-content">
+              <img src="images/wasiirad 2 .png" alt="John Doe" class="profile-pic">
+              <h3>Khadija Al-Makhzoumi</h3>
+              <p class="title">Minister of Environment and Climate Change</p>
+              <p>"The GGR Smart Parking system has greatly reduced traffic congestion and improved parking efficiency."</p>
+          </div>
+      </div>
+      <div class="testimonial-box">
+          <div class="testimonial-content">
+              <img src="images/wassiir.jpg" alt="Jane Smith" class="profile-pic">
+              <h3>Mohamed Jamc</h3>
+              <p class="title">Local Business Owner</p>
+              <p>"It’s now easier for customers to find parking, which has boosted business in our area. The system is easy to use and reliable."</p>
+          </div>
+      </div>
+      <div class="testimonial-box">
+          <div class="testimonial-content">
+              <img src="images/bussiness man.jpg" alt="Ali Hassan" class="profile-pic">
+              <h3>Prof Dr Abdullahi Hersi  </h3>
+              <p class="title">Senior Lecture of PSU</p>
+              <p>"I love how quick it is to locate a spot now. The user interface is very intuitive, even for those not tech-savvy. its part of  Transforming Digital Garowe "</p>
+          </div>
+      </div>
+  </div>
+</section>
+<!---End what people said -->
+
+<section class="contact-direction-section">
+  <!-- Contact Us Form -->
+  <div class="contact-us">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="process_form.php" method="POST" onsubmit="return handleFormSubmit()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+      </form>
+  </div>
+  <!-- Contact Form -->
+<!-- Confirmation Modal -->
+<div id="successMessage" style="display: none;">
+  <p>We have received your message, and one of our team will contact you.</p>
+  <button onclick="closeSuccessMessage()">Okay</button>
+</div>
+
+
+
+  <!-- Get Directions -->
+  <div class="get-directions">
+      <h2>Get Directions</h2>
+      <p>Find us at our convenient location and get directions to the parking area.</p>
+      
+      <!-- Google Maps Embed (replace the URL with your location) -->
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90603.94666720626!2d48.48804977537132!3d8.45540738192084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d9dd1ce4479074f%3A0x377169afe597451b!2sGeneral%20Mohamed%20Abshir%20International%20Airport!5e1!3m2!1sen!2smy!4v1729850227736!5m2!1sen!2smy" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+      </iframe>
+
+      
+      <a href="https://maps.app.goo.gl/jaYW95gzKWAUSs2D7" target="_blank" class="btn-directions">Get Directions</a>
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+      <!-- Left Side: Logo and Social Media Icons -->
+      <div class="footer-left">
+          <div class="footer-logo">
+              <img src="images/logo.png" alt="GGR Parking Logo" class="footer-logo-image">
+              <h2> <a href="index.html">GGR Parking</a></h2>
+              
+          </div>
+          <p class="social-follow">Follow us:</p>
+            <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="X" class="social-icon x"><i class="fab fa-x"></i></a>
+                 </div>
+
+      </div>
+
+      <!-- Middle Side: Quick Links -->
+      <div class="footer-middle">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><i class="fas fa-credit-card link-icon"></i> <a href="Pay.html">Pay Parking</a></li>
+            <li><i class="fas fa-envelope link-icon"></i> <a href="Contact.html">Contact Us</a></li>
+            <li><i class="fas fa-info-circle link-icon"></i> <a href="About.html">About Us</a></li>
+            <li><i class="fas fa-question-circle link-icon"></i> <a href="HowToUse.html">How to Use GGR Parking</a></li>
+        </ul>
+        
+      </div>
+
+      <!-- Right Side: Location and Emergency Call -->
+      <div class="footer-right">
+        <i class="fas fa-map-marker-alt location-icon"></i>
+          <p>GGR Parking Management Office, <br> FH4C+558, Garowe, Somalia</p>
+      <a href="tel:5000" class="emergency-call-btn">
+        <i class="fas fa-phone-alt emergency-icon"></i> Emergency Call
+    </a>
+    
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>

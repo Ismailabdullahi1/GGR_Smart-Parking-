@@ -1,4 +1,11 @@
-/* General button styling */
+/*  styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base button styles */
 .btn {
     text-decoration: none;
     color: white;
@@ -27,13 +34,7 @@
     background-color: #0069d9;
 }
 
-/* Reset some basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -55,6 +56,7 @@ body {
     z-index: -1; /* Ensures the background stays behind other content */
 }
 
+/* Content styles */
 .content {
     position: relative;
     z-index: 1; /* Bring your content in front of the background */
@@ -68,51 +70,117 @@ body {
     color: white;
 }
 
-.header-top p {
-    font-size: 14px;
-}
-
+/* General styles for the navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; /* Background color */
     position: relative;
+    z-index: 10; /* Make sure it stays above the content */
 }
 
-.logo {
-    font-size: 24px;
+/* Logo styles */
+.logo a {
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px; /* Adjust the size as needed */
+    margin-right: 8px; /* Space between image and text */
+}
+
+.logo span {
+    color: #0079ea; /* Text color */
     font-weight: bold;
-    color: #4a90e2;
+    font-size: 24px;
 }
 
-.nav-toggle {
-    display: none; /* Hidden by default, shown on mobile */
+
+
+
+
+/* Menu toggle button (hidden by default) */
+.menuToggle {
+    display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
 }
 
-.nav-toggle .bar {
+.menuToggle .bar {
     width: 25px;
     height: 3px;
     background-color: #333;
     margin: 4px 0;
 }
 
-.nav-menu {
+/* Navigation menu styles */
+.navMenu {
     list-style-type: none;
-    display: flex;
+    display: flex; /* Show flex layout on larger screens */
 }
 
-.nav-menu li {
+.navMenu li {
     margin: 0 15px;
 }
 
-.nav-menu a {
+.navMenu a {
     text-decoration: none;
     color: #333;
 }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    /* Show menu toggle button on small screens */
+    .menuToggle {
+        display: flex; /* Show the toggle button */
+    }
+    .navMenu li {
+        margin: 15px 0; /* Add vertical space between items */
+        padding: 10px; /* Add padding to increase the clickable area */
+    }
+    /* Hide nav menu on small screens */
+    .navMenu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width */
+        position: absolute; /* Position it over the content */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        background-color: #ffffff; /* Background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+    
+    /* Show nav menu when the toggle button is active */
+    .navMenu.active {
+        display: flex; /* Show the menu when active */
+    }
+    .navMenu a {
+        font-size: 18px; /* Increase font size for better readability */
+        padding: 10px 20px; /* Increase padding for larger clickable area */
+    }
+}
+
+
+/* Ensure the nav-menu is displayed on larger screens */
+@media (min-width: 769px) {
+    .naMenu {
+        display: flex; /* Always show on larger screens */
+    }
+}
+
+/* Styles for the nav button */
+.nav-button {
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
 
 /* Main Section */
 .main-content {
@@ -171,11 +239,7 @@ footer {
 }
 
 /* Responsive adjustments for Main Section */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stacks logo and nav on smaller screens */
-        align-items: flex-start; /* Aligns items to the left */
-    }
+
 
     .nav-menu {
         display: none; /* Hide menu on mobile by default */
@@ -208,7 +272,6 @@ footer {
     .btn-pay, .btn-book {
         width: 90%; /* Full width for buttons */
     }
-}
 
 
 
@@ -230,19 +293,7 @@ footer {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-    .serviceBox {
-        max-width: 100%; /* Make boxes take up full width on smaller screens */
-        width: 100%;
-    }
-}
 
-@media (max-width: 480px) {
-    .serviceBox {
-        max-width: 100%; /* For smaller screens */
-        width: 100%;
-    }
-}
 .button-container {
     display: flex;
     justify-content: center;
@@ -380,14 +431,539 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .steps-container, .solutions-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .step-box, .solution-box {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+/* Section Styling */
+.smart-parking-info {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('images/baground.jpeg') center/cover no-repeat; /* Background image with dark overlay */
+    background-attachment: fixed; /* Makes background fixed while scrolling */
+}
+.smart-parking-info h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Info Box Container */
+.info-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Info Box */
+.info-box {
+    width: 300px;
+    perspective: 1000px; /* Adds depth for 3D effect */
+}
+
+.box-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Allows 3D effect on hover */
+}
+
+.info-box:hover .box-content {
+    transform: rotateY(10deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.box-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Title Styling */
+.box-content h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Description Styling */
+.box-content p {
+    font-size: 16px;
+    color: #666;
+}
+/* Testimonials Section Styling */
+.testimonials-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f0f0f0;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('images/baground\ 3.jpeg') center/cover no-repeat; /* Background image with dark overlay */
+background-attachment: fixed; /* Makes background fixed while scrolling */
+}
+
+.testimonials-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Testimonial Box Container */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Testimonial Box */
+.testimonial-box {
+    width: 280px;
+    perspective: 1000px; /* Adds depth for 3D effect */
+}
+
+.testimonial-content {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.testimonial-box:hover .testimonial-content {
+    transform: rotateY(5deg) rotateX(2deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Name Styling */
+.testimonial-content h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Title Styling */
+.testimonial-content .title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Feedback Styling */
+.testimonial-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
+/* Tutorial Section Styling */
+/* Tutorial Section Styling */
+.tutorial-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.tutorial-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Video Box Styling */
+.video-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* Video Styling */
+.video-box iframe {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Description Styling */
+.video-description {
+    text-align: left;
+    color: #555;
+}
+
+.video-description h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.video-description p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .video-box {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .video-box iframe {
+        max-width: 100%; /* Make the video responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+/* Responsive Design */
+
+/* Contact & Directions Section */
+.contact-direction-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+.contact-us, .get-directions {
+    flex: 1 1 45%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2, .get-directions h2 {
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.contact-us form label, 
+.contact-us form input, 
+.contact-us form textarea, 
+.contact-us form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-us form input, 
+.contact-us form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us form button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us form button:hover {
+    background-color: #3a78c2;
+}
+
+/* Directions button */
+.btn-directions {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-directions:hover {
+    background-color: #3a78c2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-direction-section {
+        flex-direction: column; /* Stack boxes vertically on mobile */
+    }
+
+    .contact-us, .get-directions {
+        flex: 1 1 100%; /* Each box takes full width on smaller screens */
+    }
+}
+/* Footer Section */
+/* Footer Section */
+.footer-section {
+    position: relative;
+    color: #fff;
+    padding: 40px 20px;
+    background: url('images/footer.jpg') center/cover no-repeat;
+}
+
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    z-index: 0;
+}
+
+.footer-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 1;
+    color: #fff;
+}
+
+/* Footer Left Section: Logo and Social Icons */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-logo-image {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: 10px; /* Space between logo image and text */
+    
+}
+
+
+.footer-left h2 a {
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+    color: #1da1f2;
+}
+
+.social-follow {
+    text-align: center; /* Center the text */
+    font-size: 20px; /* Font size for the follow text */
+    margin-bottom: 10px; /* Space below the text */
+    color: #fff; /* Color for the follow text */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icons */
+    gap: 15px; /* Space between the icons */
+}
+
+.social-icon {
+    font-size: 30px; /* Size of the icons */
+    transition: transform 0.3s ease; /* Transition for the scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.facebook {
+    color: #3b5998; /* Facebook color */
+}
+
+.instagram {
+    color: #e4405f; /* Instagram color */
+}
+
+.x {
+    color: #1da1f2; /* X (Twitter) color */
+}
+
+
+/* Footer Middle Section: Quick Links */
+.footer-middle h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 8px 0;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #4a90e2;
+}
+
+/* Footer Right Section: Location and Emergency Call */
+.footer-right h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-right p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.emergency-icon {
+    font-size: 20px; /* Adjust size as needed */
+    color: white; /* Change to your desired color */
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.emergency-call-btn {
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.emergency-call-btn:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+}
+
+.emergency-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically on mobile */
+        align-items: flex-start;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+.parking-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+}
+.total-spots {
+    color: black;
+}
+.available-spots {
+    color: green;
+    font-weight: bold;
+}
+/* General styling for the navigation button */
+.nav-button {
+    display: inline-block; /* Make it an inline block */
+    padding: 10px 20px; /* Default padding for larger displays */
+    margin: 0; /* No margin to keep it aligned */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* Text color */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Default font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+}
+
+/* 3D Effect on hover */
+.nav-button:hover {
+    transform: translateY(-2px); /* Move up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Responsive styles for mobile */
+
+
+/* Responsive styles for larger displays */
+@media (min-width: 601px) {
+    .nav-button {
+        font-size: 16px; /* Default font size for larger screens */
+        padding: 10px 20px; /* Default padding */
+    }
+}
+@media (max-width: 1200px) {
+    .section {
+        flex: 1 1 45%; /* Two sections per row on medium screens */
+    }
+
+    /* Adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .section {
+            flex: 1 1 100%; /* Full width on smaller screens */
+        }
+    }
+}
+.location-icon {
+    font-size: 30px; /* Adjust size as needed */
+    color: #3498db; /* Change to your desired color */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.location-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+.link-icon {
+    font-size: 20px; /* Adjust size as needed */
+    color: #3498db; /* Change to your desired color */
+    margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.link-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
 }

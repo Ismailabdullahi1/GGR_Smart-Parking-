@@ -1,42 +1,4 @@
-/* General Header Styles */
-.header-top {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Ensure logo is on the left and nav on the right */
-    align-items: center;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-}
-
-.nav-menu li {
-    margin-left: 20px;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-}
 
 .btn-pay {
     background-color: #28a745;
@@ -51,47 +13,6 @@
     background-color: #218838;
 }
 
-/* Mobile Menu Button */
-.menu-toggle {
-    display: none; /* Hidden by default, only visible on small screens */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #333;
-    margin: 4px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: white;
-        width: 200px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-menu.active {
-        display: flex; /* Show menu when hamburger is clicked */
-    }
-
-    .nav-menu li {
-        margin: 10px 0;
-        text-align: left;
-    }
-
-    .menu-toggle {
-        display: flex; /* Show hamburger icon on mobile */
-    }
-}
 
 
 main {
@@ -192,37 +113,3 @@ p {
     margin: 0 auto;
 }
 
-/* Tablet and Small Screen Styles */
-@media (min-width: 768px) {
-    .payment-container {
-        flex-direction: row; /* Switch to row on tablets */
-        justify-content: space-between;
-    }
-
-    .payment-form {
-        margin-right: 30px;
-    }
-
-    button {
-        width: auto; /* Adjust button width for larger screens */
-    }
-
-    .car-image img {
-        max-width: 300px; /* Larger for tablets */
-    }
-}
-
-/* Desktop and Larger Screens */
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 2.5rem; /* Larger font for desktops */
-    }
-
-    .payment-container {
-        padding: 30px;
-    }
-
-    .car-image img {
-        max-width: 350px; /* Full size for desktop */
-    }
-}
