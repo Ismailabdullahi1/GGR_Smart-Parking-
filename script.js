@@ -2,7 +2,7 @@
 
 
 // Function to dynamically change the service type
-const services = ["Fast", "Multiple Payment Options", "Secured"];
+const services = [ "Fast", "More Options", "Secured"];
 let currentServiceIndex = 0;
 
 // Function to update the service type
@@ -103,80 +103,43 @@ document.getElementById("pay-now").addEventListener("click", function() {
 
   
 
-// Get modal element
-const modal = document.getElementById("confirmationModal");
+ // Get modal element
+ const modal = document.getElementById("confirmationModal");
 
-// Get close button
-const closeModal = document.getElementById("closeModal");
+ // Get close button
+ const closeModal = document.getElementById("closeModal");
 
-// Get okay button
-const okayButton = document.getElementById("okayButton");
+ // Get okay button
+ const okayButton = document.getElementById("okayButton");
 
-// Get form element
-const contactForm = document.getElementById("contactForm");
+ // Get form element
+ const contactForm = document.getElementById("contactForm");
 
-// Show modal when form is submitted
-contactForm.onsubmit = function (event) {
-    event.preventDefault(); // Prevent form submission
-    modal.style.display = "block"; // Show the modal
-};
+ // Show modal when form is submitted
+ contactForm.onsubmit = function (event) {
+     event.preventDefault(); // Prevent form submission
+     modal.style.display = "block"; // Show the modal
+ };
 
-// Close modal when user clicks on <span> (x)
-closeModal.onclick = function () {
-    modal.style.display = "none";
-};
+ // Close modal when user clicks on <span> (x)
+ closeModal.onclick = function () {
+     modal.style.display = "none";
+ };
 
-// Close modal when user clicks okay
-okayButton.onclick = function () {
-    modal.style.display = "none";
-};
+ // Close modal when user clicks okay
+ okayButton.onclick = function () {
+     modal.style.display = "none";
+ };
 
-// Close modal when user clicks outside of the modal
-window.onclick = function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
+ // Close modal when user clicks outside of the modal
+ window.onclick = function (event) {
+     if (event.target === modal) {
+         modal.style.display = "none";
+     }
+ };
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Check for success parameter in the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('success')) {
-        document.getElementById("contactForm").style.display = "none";
-        document.getElementById("successMessage").style.display = "block";
-    }
-});
 
-// Function to close the success message
-function closeSuccessMessage() {
-    document.getElementById("successMessage").style.display = "none";
-    document.getElementById("contactForm").reset(); // Optionally reset the form
-    document.getElementById("contactForm").style.display = "block"; // Show the form again if needed
-}
 
-function handleFormSubmit() {
-  // Create an XMLHttpRequest object
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "process_form.php", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  // Capture form data
-  var formData = new FormData(document.getElementById('contactForm'));
-
-  // Send the form data
-  xhr.send(formData);
-
-  // Handle the response
-  xhr.onload = function () {
-      if (xhr.status === 200) {
-          document.getElementById('successMessage').style.display = 'block'; // Show success message
-      } else {
-          alert('There was an error sending your message. Please try again later.');
-      }
-  };
-
-  return false; // Prevent the default form submission
-}
 //parking availbity//
 function fetchParkingData() {
   fetch('parking availbity.php')

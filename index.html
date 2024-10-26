@@ -33,9 +33,9 @@
         
         <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="Test.html">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="booking.html">Help</a></li>
+            <li><a href="Test.html">About us </a></li>
+            <li><a href="Test.html">Contact us </a></li>
             
         </ul>
         <a href="Pay.html" class="nav-button">Pay Parking</a>
@@ -48,7 +48,7 @@
     <div class="background-image"></div>
     <div class="content">
         <main class="main-content">
-            <h1>Pay with <span id="service-type">Fast</span></h1>
+          <h1 >Pay <i class="fas fa-credit-card link-icon"></i>with <span id="service-type">Fast</span></h1>
             <div class="buttons">
                 <!--<div class="button-container">
                     <a href="booking.html" class="btn btn-book">Book Parking</a>
@@ -100,7 +100,7 @@
   
 <!----how to use section -->
 <section class="how-to-use-section">
-  <h2 class="how-to-use-title">How to Use GGR Smart Parking</h2>
+  <h2 class="how-to-use-title">How Easy is GGR Smart Parking</h2>
   <div class="steps-container">
     <div class="step-box">
       <div class="step-icon"><i class="fas fa-car"></i></div>
@@ -111,13 +111,13 @@
     <div class="step-box">
       <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
       <h3 class="step-title">Step 2: Find a Parking Spot</h3>
-      <p class="step-description">Follow the guidance system to an available parking space as displayed on the map.</p>
+      <p class="step-description">Follow the guidance in The Gate and Park Your car</p>
     </div>
 
     <div class="step-box">
       <div class="step-icon"><i class="fas fa-clock"></i></div>
       <h3 class="step-title">Step 3: Track Time</h3>
-      <p class="step-description">Track your parking duration in real-time through our website.</p>
+      <p class="step-description">Track your parking duration and charges in real-time through our website.</p>
     </div>
 
     <div class="step-box">
@@ -135,25 +135,32 @@
   <div class="info-box-container">
       <div class="info-box">
           <div class="box-content">
-              <img src="images/garowe Digital.png" alt="Efficient Parking" class="box-image">
-              <h3>Efficient Parking Management</h3>
-              <p>Streamlines parking operations, reducing congestion and optimizing space usage across the city.</p>
+              <img src="images/digital 1.png" alt="Efficient Parking" class="box-image">
+              <h3>Easier Parking Access</h3>
+              <p>Real-time parking updates and bookings make it easier for everyone to find and reserve spots quickly.</p>
           </div>
       </div>
       <div class="info-box">
           <div class="box-content">
-              <img src="images/garowe digital 2.jpg" alt="Eco-Friendly Solutions" class="box-image">
-              <h3>Eco-Friendly Solutions</h3>
-              <p>Minimizes vehicle emissions by decreasing idle times, contributing to a greener city environment.</p>
+              <img src="images/digital2 .png" alt="Eco-Friendly Solutions" class="box-image">
+              <h3>Flexible Payments</h3>
+              <p>With cashless options, users can pay securely and conveniently, matching Garowe’s dgital transforming .</p>
           </div>
       </div>
       <div class="info-box">
           <div class="box-content">
-              <img src="images/garowe security.jpg" alt="Enhanced Security" class="box-image">
-              <h3>Enhanced Security</h3>
-              <p>Utilizes advanced technology to ensure safe and secure parking for all citizens and visitors.</p>
+              <img src="images/digital3.png" alt="Enhanced Security" class="box-image">
+              <h3>Smarter City Planning</h3>
+              <p>Our system gathers helpful data to support better planning and future city improvements.</p>
           </div>
       </div>
+      <div class="info-box">
+        <div class="box-content">
+            <img src="images/digital4.png" alt="Enhanced Security" class="box-image">
+            <h3>Eco-Friendly Solution</h3>
+            <p>By reducing traffic and idle time, our service helps Garowe stay green and efficient.</p>
+        </div>
+    </div>
   </div>
 </section>
 
@@ -218,26 +225,32 @@
 <section class="contact-direction-section">
   <!-- Contact Us Form -->
   <div class="contact-us">
-      <h2>Contact Us</h2>
-      <form id="contactForm" action="process_form.php" method="POST" onsubmit="return handleFormSubmit()">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit">Send Message</button>
-      </form>
-  </div>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- The Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p>We have received your message and will respond to you as soon as possible.</p>
+        <button id="okayButton">Okay</button>
+    </div>
+</div>
+
   <!-- Contact Form -->
 <!-- Confirmation Modal -->
-<div id="successMessage" style="display: none;">
-  <p>We have received your message, and one of our team will contact you.</p>
-  <button onclick="closeSuccessMessage()">Okay</button>
-</div>
 
 
 
@@ -287,10 +300,10 @@
       <div class="footer-middle">
           <h3>Quick Links</h3>
           <ul class="quick-links">
-            <li><i class="fas fa-credit-card link-icon"></i> <a href="Pay.html">Pay Parking</a></li>
-            <li><i class="fas fa-envelope link-icon"></i> <a href="Contact.html">Contact Us</a></li>
-            <li><i class="fas fa-info-circle link-icon"></i> <a href="About.html">About Us</a></li>
-            <li><i class="fas fa-question-circle link-icon"></i> <a href="HowToUse.html">How to Use GGR Parking</a></li>
+            <li> <a href="Pay.html">Pay Parking </a> <i class="fas fa-credit-card link-icon"></i></li>
+            <li> <a href="Contact.html">Contact Us </a> <i class="fas fa-envelope link-icon"></i></li>
+            <li> <a href="About.html">About Us </a> <i class="fas fa-info-circle link-icon"></i></li>
+            <li> <a href="HowToUse.html">How to Use GGR Parking </a> <i class="fas fa-question-circle link-icon"></i></li>
         </ul>
         
       </div>
