@@ -213,12 +213,32 @@ body {
     gap: 10px;
     margin: 20px;
 }
+.button-container1 {
+    display: inline-block; /* Allows centering */
+   
+   
+    padding: 15px 30px; /* Padding for better appearance */
+    border-radius: 2px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Font size */
+    
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+    position: relative; /* For positioning the sneezing effect */
+   
+}
+
+
 
 .button-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+   
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 footer {
@@ -909,14 +929,29 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
     width: 300px;
     background-color: #fff;
     text-align: center;
+    animation: sneeze 1s infinite; /* Apply the sneezing animation */
 }
+
+/* Text styles */
 .total-spots {
     color: black;
 }
+
 .available-spots {
     color: green;
     font-weight: bold;
 }
+
+/* Sneezing animation */
+@keyframes sneeze {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger */
+    }
+}
+
 /* General styling for the navigation button */
 .nav-button {
     display: inline-block; /* Make it an inline block */
@@ -1010,3 +1045,4 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
     text-decoration: none;
     cursor: pointer;
 }
+

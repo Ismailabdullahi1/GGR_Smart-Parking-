@@ -1,20 +1,5 @@
 
 
-.btn-pay {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.btn-pay:hover {
-    background-color: #218838;
-}
-
-
-
 main {
     width: 100%;
     max-width: 1000px;
@@ -82,25 +67,157 @@ button:hover {
     background-color: #218838;
 }
 
+/* Parking Summary Box */
+/* Parking Summary Box */
 .summary-box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Center and scale animation */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger 3D shadow effect */
+    padding: 25px;
+    width: 90%;
+    max-width: 420px; /* Better readability */
+    animation: popIn 0.5s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  /* Animation for pop-in effect */
+  @keyframes popIn {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  }
+  
+  /* Hover effect */
+  .summary-box:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
+  }
+  
+  /* Booking Icon Styling */
+  .booking-icon {
+    text-align: center;
+    font-size: 40px;
+    color: #4a90e2;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
     color: #333;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #444;
+    margin: 12px 0;
+    line-height: 1.5;
+  }
+  
+  /* Bold and clear labels */
+  strong {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* Dropdown and Form Inputs */
+  label {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Pay Now Button Styling */
+  .btn-pay {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #4a90e2, #357ab8);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-pay:hover {
+    background-image: linear-gradient(to right, #357ab8, #4a90e2);
+    transform: translateY(-3px); /* Lifts button slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close Button Styling */
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .close:hover {
+    color: #333;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .summary-box {
+      max-width: 95%;
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .btn-pay {
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+  /* Ensure buttons are visible */
+#pay-now, .close {
+    display: block; /* Ensures visibility */
+    z-index: 1001; /* Makes sure it's above other elements */
+  }
+  
+  /* Make sure the summary-box has a high enough z-index */
+  .summary-box {
+    z-index: 1000;
+  }
+  
 .car-image {
     text-align: center;
     margin-bottom: 20px;
@@ -112,4 +229,30 @@ p {
     display: block;
     margin: 0 auto;
 }
+/* Fullscreen Loading Overlay */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-icon {
+    font-size: 50px; /* Adjust size as needed */
+    margin-bottom: 10px;
+    color: rgb(0, 128, 255); /* Space between icon and text */
+
+}
+
+/* Keyframes for spinning animation */
 
