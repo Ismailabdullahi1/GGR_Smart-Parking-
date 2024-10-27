@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     
   <title>GGR Parking</title>
   <link rel="stylesheet" href="style.css">
@@ -33,12 +35,12 @@
         </div>
         
         <ul class="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="Test.html">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            
-        </ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Help</a></li>
+          <li><a href="Test.html">About us </a></li>
+          <li><a href="Test.html">Contact us </a></li>
+          
+      </ul>
         <a href="Pay.html" class="nav-button">Refresh</a>
 
     </nav>
@@ -46,45 +48,65 @@
 </header>
 <!------>
 <main>
-    <h1>Pay Parking</h1>
-    <div class="payment-container">
+  <h1>Pay Parking</h1>
+  <div class="payment-container">
       <div class="payment-form">
-        <form id="pay-parking-form">
-          <label for="car-plate">Enter Car Plate Number:</label>
-          <input type="text" id="car-plate" name="car_plate" required>
-          <button type="submit">Search</button>
-        </form>
-        
-        <div class="summary-box" id="summary-box" style="display: none;">
-          <h2>Parking Summary</h2>
-          <p><strong>Car Plate:</strong> <span id="plate-number"></span></p>
-          <p><strong>Hours in Parking:</strong> <span id="parking-hours"></span></p>
-          <p><strong>Parking Fee:</strong> <span id="parking-fee"></span></p>
-          <p><strong>Total Payment:</strong> <span id="total-payment"></span></p>
+          <form id="pay-parking-form">
+              <label for="car-plate">Enter Car Plate Number:</label>
+              <input type="text" id="car-plate" name="car_plate" required>
+              <button type="submit">Search</button>
+          </form>
 
-          <label for="payment-option">Choose Payment Option:</label>
-          <select id="payment-option" name="payment_option">
-            <option value="Visa and MasterCard">Visa & MasterCard </option>
-            <option value="Waafi">WAAFI </option>
-            <option value="Dahab Plus">Dahab Plus </option>
-            <option value="primier Wallet">Primeir Wallet </option>
-            <option value="IBS">E-Besa IBS </option>
-            <option value="YEEL pay ">YEEL Pay</option>
-          </select>
-
-          <button id="pay-now" class="btn btn-pay">Pay Now</button>
-        </div>
-      </div>
-
+          <!-- Updated Payment Summary Section -->
+          <div class="summary-box" id="summary-box">
+            <!-- Close Button with new class name -->
+            <span class="close-btn" id="close-button">&times;</span>
+            
+            <div class="booking-icon">
+              <i class="fas fa-ticket-alt"></i> <!-- FontAwesome booking icon -->
+            </div>
+            <h3>Parking Summary</h3>
+            <p><strong>Car Plate:</strong> <span id="plate-number"></span></p>
+            <p><strong>Hours in Parking:</strong> <span id="parking-hours"></span></p>
+            <p><strong>Parking Fee:</strong> <span id="parking-fee"></span></p>
+            <p><strong>Total Payment:</strong> <span id="total-payment"></span></p>
+          
+            <label for="payment-option">Choose Payment Option:</label>
+            <select id="payment-option" name="payment_option">
+              <option value="Visa and MasterCard">Visa & MasterCard</option>
+              <option value="Waafi">WAAFI</option>
+              <option value="Dahab Plus">Dahab Plus</option>
+              <option value="Premier Wallet">Premier Wallet</option>
+              <option value="IBS">IBS</option>
+              <option value="YEEL Pay">YEEL Pay</option>
+            </select>
+          
+            <!-- Pay Now Button with new class name -->
+            <button id="pay-now" class="btn-pay-now">Complete Payment</button>
+          </div>
+          
+  
+      <!-- Display Message and Image -->
       <div class="car-image">
-        <p>Pay Your Parking with Multiple Payment Options</p>
-        <img id="car-img" src="images/payments options.jpg" alt="Car Image">
+          <p>Pay Your Parking with Multiple Payment Options</p>
+          <img id="car-img" src="images/payments options.jpg" alt="Payment Options">
       </div>
-    </div>
+  </div>
+
+  <!-- Loading Overlay for Car Search -->
+  <div id="loading-overlay" style="display: none;">
+      <div class="loading-content">
+          <i class="fas fa-spinner fa-spin loading-icon"></i>
+          <p>Searching for your car...</p>
+      </div>
+  </div>
 </main>
 
+
+
 <!-- Footer -->
-<footer class="footer-section">
+ <!-- Footer -->
+ <footer class="footer-section">
   <div class="footer-overlay"></div>
   <div class="footer-content">
       <!-- Left Side: Logo and Social Media Icons -->
@@ -98,7 +120,7 @@
             <div class="social-icons">
             <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="X" class="social-icon x"><i class="fab fa-x"></i></a>
+            
                  </div>
 
       </div>
@@ -107,10 +129,10 @@
       <div class="footer-middle">
           <h3>Quick Links</h3>
           <ul class="quick-links">
-            <li><i class="fas fa-credit-card link-icon"></i> <a href="Pay.html">Pay Parking</a></li>
-            <li><i class="fas fa-envelope link-icon"></i> <a href="Contact.html">Contact Us</a></li>
-            <li><i class="fas fa-info-circle link-icon"></i> <a href="About.html">About Us</a></li>
-            <li><i class="fas fa-question-circle link-icon"></i> <a href="HowToUse.html">How to Use GGR Parking</a></li>
+            <li> <a href="Pay.html">Pay Parking </a> <i class="fas fa-credit-card link-icon"></i></li>
+            <li> <a href="Contact.html">Contact Us </a> <i class="fas fa-envelope link-icon"></i></li>
+            <li> <a href="About.html">About Us </a> <i class="fas fa-info-circle link-icon"></i></li>
+            <li> <a href="HowToUse.html">How to Use GGR Parking </a> <i class="fas fa-question-circle link-icon"></i></li>
         </ul>
         
       </div>
@@ -127,5 +149,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="pay.js"></script>
 </body>
 </html>

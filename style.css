@@ -1,4 +1,6 @@
 /*  styling */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -160,7 +162,15 @@ body {
     }
     .navMenu a {
         font-size: 18px; /* Increase font size for better readability */
-        padding: 10px 20px; /* Increase padding for larger clickable area */
+        padding: 20px 20px; /* Increase padding for larger clickable area */
+    }
+    .logo-image {
+        width: 30px; /* Smaller image size */
+        margin-right: 5px; /* Reduced spacing */
+    }
+
+    .logo span {
+        font-size: 18px; /* Smaller text size */
     }
 }
 
@@ -203,12 +213,32 @@ body {
     gap: 10px;
     margin: 20px;
 }
+.button-container1 {
+    display: inline-block; /* Allows centering */
+   
+   
+    padding: 15px 30px; /* Padding for better appearance */
+    border-radius: 2px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Font size */
+    
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+    position: relative; /* For positioning the sneezing effect */
+   
+}
+
+
 
 .button-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+   
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 footer {
@@ -266,7 +296,7 @@ footer {
     }
 
     .main-content h1 {
-        font-size: 32px; /* Smaller font size for mobile */
+        font-size: 28px; /* Smaller font size for mobile */
     }
 
     .btn-pay, .btn-book {
@@ -351,9 +381,9 @@ footer {
 .step-box {
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
-  border-radius: 15px;
+  border-radius: 40px;
   padding: 30px;
-  width: 220px;
+  width: 350px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -387,7 +417,7 @@ footer {
 
 .solutions-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 26px;
   margin-bottom: 40px;
   color: #333;
 }
@@ -404,7 +434,7 @@ footer {
   box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
   border-radius: 15px;
   padding: 30px;
-  width: 250px;
+  width: 350px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -457,7 +487,7 @@ footer {
 
 /* Info Box */
 .info-box {
-    width: 300px;
+    width: 400px;
     perspective: 1000px; /* Adds depth for 3D effect */
 }
 
@@ -523,7 +553,7 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
 
 /* Testimonial Box */
 .testimonial-box {
-    width: 280px;
+    width: 380px;
     perspective: 1000px; /* Adds depth for 3D effect */
 }
 
@@ -869,6 +899,7 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
     transition: background-color 0.3s ease;
 }
 
+
 .emergency-call-btn:hover {
     background-color: #c0392b; /* Darker shade on hover */
 }
@@ -898,14 +929,29 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
     width: 300px;
     background-color: #fff;
     text-align: center;
+    animation: sneeze 1s infinite; /* Apply the sneezing animation */
 }
+
+/* Text styles */
 .total-spots {
     color: black;
 }
+
 .available-spots {
     color: green;
     font-weight: bold;
 }
+
+/* Sneezing animation */
+@keyframes sneeze {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger */
+    }
+}
+
 /* General styling for the navigation button */
 .nav-button {
     display: inline-block; /* Make it an inline block */
@@ -967,3 +1013,36 @@ background-attachment: fixed; /* Makes background fixed while scrolling */
 .link-icon:hover {
     transform: scale(1.2); /* Scale up on hover */
 }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
