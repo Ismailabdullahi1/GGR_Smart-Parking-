@@ -36,11 +36,6 @@ This project is currently in progress and is being developed as part of my **Bac
 
 ---
 
-## Current Progress
-
-- **Phase 1 (FYP 1)**: Focused on web design, setting up the MySQL database (`parking_bookings` table), and implementing the front-end for parking availability and reservation.
-- **Phase 2 (FYP 2)**: Will focus on integrating real-time parking data with cameras, completing payment gateway integration, and testing the system with stakeholders.
-
 ### Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript (jQuery), Bootstrap
